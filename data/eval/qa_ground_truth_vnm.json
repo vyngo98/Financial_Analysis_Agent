@@ -1,0 +1,235 @@
+{
+  "source_document": "vinamilk_2023_consolidated_financial_statements.pdf",
+  "company": "Vietnam Dairy Products Joint Stock Company (Vinamilk)",
+  "description": "Ground-truth QA set for a REAL, digital-native (text-layer) financial report — Vinamilk's audited consolidated financial statements FY2023 (auditor: KPMG). Replaces the synthetic 'acme' set and exercises the NATIVE (pdfplumber, non-OCR) ingestion path. All figures were verified directly against the source PDF images. Currency: VND. 'expected_pages' are 1-indexed PDF page numbers of this file (matching ingest_pdf's 'page' metadata). 'content_type' marks whether the answer lives in a table or narrative text.",
+  "questions": [
+    {
+      "id": 1,
+      "category": "company_profile",
+      "content_type": "text",
+      "question": "Which company do these financial statements belong to?",
+      "ground_truth": "Vietnam Dairy Products Joint Stock Company (Vinamilk) and its subsidiaries.",
+      "expected_pages": [6, 10]
+    },
+    {
+      "id": 2,
+      "category": "company_profile",
+      "content_type": "text",
+      "question": "Who audited Vinamilk's 2023 consolidated financial statements?",
+      "ground_truth": "KPMG (KPMG Limited Branch).",
+      "expected_pages": [3, 5]
+    },
+    {
+      "id": 3,
+      "category": "company_profile",
+      "content_type": "text",
+      "question": "For which reporting date / year are these consolidated statements prepared?",
+      "ground_truth": "The year ended 31 December 2023 (statement of financial position as at 31/12/2023).",
+      "expected_pages": [6, 10]
+    },
+    {
+      "id": 4,
+      "category": "company_profile",
+      "content_type": "text",
+      "question": "Who is the Chief Executive Officer that approved the financial statements?",
+      "ground_truth": "Mai Kieu Lien (Chief Executive Officer). Prepared by Le Thanh Liem (Executive Director – Finance cum Chief Accountant).",
+      "expected_pages": [9, 14]
+    },
+    {
+      "id": 5,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were Vinamilk's total assets as at 31 December 2023?",
+      "ground_truth": "52,673,371,104,460 VND (as at 1/1/2023: 48,482,664,236,220 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 6,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were current assets as at 31 December 2023?",
+      "ground_truth": "35,935,879,621,477 VND (1/1/2023: 31,560,382,174,201 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 7,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was the cash and cash equivalents balance at 31 December 2023?",
+      "ground_truth": "2,912,027,359,925 VND (1/1/2023: 2,299,943,527,624 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 8,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was the value of inventories at 31 December 2023?",
+      "ground_truth": "6,128,081,805,088 VND (1/1/2023: 5,537,563,396,117 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 9,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were short-term financial investments at 31 December 2023?",
+      "ground_truth": "20,137,243,800,460 VND (1/1/2023: 17,414,055,328,683 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 10,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were total liabilities at 31 December 2023?",
+      "ground_truth": "17,647,627,338,990 VND (1/1/2023: 15,666,145,881,135 VND).",
+      "expected_pages": [8]
+    },
+    {
+      "id": 11,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was total owners' equity at 31 December 2023?",
+      "ground_truth": "35,025,743,765,470 VND (1/1/2023: 32,816,518,355,085 VND).",
+      "expected_pages": [8]
+    },
+    {
+      "id": 12,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was Vinamilk's share capital at 31 December 2023?",
+      "ground_truth": "20,899,554,450,000 VND (unchanged from 1/1/2023).",
+      "expected_pages": [8]
+    },
+    {
+      "id": 13,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was goodwill on the balance sheet at 31 December 2023?",
+      "ground_truth": "1,321,927,659,937 VND (1/1/2023: 1,567,467,775,162 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 14,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was Vinamilk's net revenue in 2023?",
+      "ground_truth": "60,368,915,511,505 VND (2022: 59,956,247,197,418 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 15,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was revenue from sales of goods and provision of services (gross revenue) in 2023?",
+      "ground_truth": "60,478,912,566,740 VND (2022: 60,074,730,223,299 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 16,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was the cost of sales in 2023?",
+      "ground_truth": "35,824,183,896,095 VND (2022: 36,059,015,690,711 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 17,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was gross profit in 2023?",
+      "ground_truth": "24,544,731,615,410 VND (2022: 23,897,231,506,707 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 18,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was profit before tax in 2023?",
+      "ground_truth": "10,967,899,391,486 VND (2022: 10,495,534,676,745 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 19,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was net profit after tax in 2023?",
+      "ground_truth": "9,019,354,165,051 VND (2022: 8,577,575,319,708 VND).",
+      "expected_pages": [10, 11]
+    },
+    {
+      "id": 20,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was basic earnings per share in 2023?",
+      "ground_truth": "3,796 VND per share (2022: 3,632 VND per share).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 21,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were selling expenses in 2023?",
+      "ground_truth": "13,018,093,111,879 VND (2022: 12,548,212,246,871 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 22,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "What was net cash flow from operating activities in 2023?",
+      "ground_truth": "7,887,423,562,363 VND (2022: 8,827,273,176,516 VND).",
+      "expected_pages": [12]
+    },
+    {
+      "id": 23,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "What was net cash flow from financing activities in 2023?",
+      "ground_truth": "Negative 4,292,773,661,270 VND, i.e. (4,292,773,661,270) VND (2022: (12,360,289,365,923) VND).",
+      "expected_pages": [13]
+    },
+    {
+      "id": 24,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "How much did Vinamilk pay in dividends during 2023?",
+      "ground_truth": "8,046,328,463,250 VND (payments of dividends, code 36; same amount in 2022).",
+      "expected_pages": [13]
+    },
+    {
+      "id": 25,
+      "category": "reasoning",
+      "content_type": "table",
+      "question": "What was Vinamilk's gross profit margin in 2023?",
+      "ground_truth": "Approximately 40.7% (gross profit 24,544,731,615,410 / net revenue 60,368,915,511,505).",
+      "expected_pages": [10],
+      "notes": "Reasoning: needs two income-statement lines then a ratio. Accept ~40-41%."
+    },
+    {
+      "id": 26,
+      "category": "reasoning",
+      "content_type": "table",
+      "question": "By what percentage did net profit after tax grow in 2023 versus 2022?",
+      "ground_truth": "About 5.2% (from 8,577,575,319,708 to 9,019,354,165,051 VND).",
+      "expected_pages": [10],
+      "notes": "Reasoning: (9,019,354,165,051 - 8,577,575,319,708) / 8,577,575,319,708 ≈ 5.15%."
+    },
+    {
+      "id": 27,
+      "category": "negative_not_found",
+      "content_type": "n/a",
+      "question": "What was Vinamilk's share price on the stock exchange at 31 December 2023?",
+      "ground_truth": "Not found. The financial statements do not disclose a market share price.",
+      "expected_pages": [],
+      "notes": "Negative test: the system must say the information is not in the document, not invent a figure."
+    },
+    {
+      "id": 28,
+      "category": "negative_not_found",
+      "content_type": "n/a",
+      "question": "What is Vinamilk's revenue target for 2024?",
+      "ground_truth": "Not found. These are audited 2023 statements and contain no 2024 revenue forecast/target.",
+      "expected_pages": [],
+      "notes": "Negative/trap test: no forward-looking targets in audited statements."
+    }
+  ]
+}

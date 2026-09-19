@@ -1,0 +1,235 @@
+{
+  "source_document": "DHG-Audited-FS-2025-VN.pdf",
+  "company": "Công ty Cổ phần Dược Hậu Giang (DHG)",
+  "description": "Bộ QA ground-truth để đánh giá hệ thống RAG trên báo cáo tài chính tiếng Việt DẠNG SCAN (đã kiểm toán, Deloitte). Mọi con số được ĐỐI CHIẾU TRỰC TIẾP với ảnh PDF gốc (không lấy từ OCR) để tránh sai số. Đơn vị tiền: VND. 'expected_pages' là số trang PDF (1-indexed, khớp metadata 'page' do ingest_pdf sinh). 'content_type' cho biết đáp án nằm ở bảng hay văn bản. Chủ yếu kiểm khả năng OCR + truy hồi số liệu tài chính tiếng Việt.",
+  "questions": [
+    {
+      "id": 1,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Báo cáo tài chính này là của công ty nào và trụ sở ở đâu?",
+      "ground_truth": "Công ty Cổ phần Dược Hậu Giang, trụ sở tại 288 Bis Nguyễn Văn Cừ, Phường Cái Khế, Thành phố Cần Thơ, Việt Nam.",
+      "expected_pages": [7]
+    },
+    {
+      "id": 2,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Đơn vị kiểm toán báo cáo tài chính năm 2025 của Dược Hậu Giang là ai?",
+      "ground_truth": "Chi nhánh Công ty TNHH Kiểm toán Deloitte Việt Nam.",
+      "expected_pages": [3, 4]
+    },
+    {
+      "id": 3,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Báo cáo tài chính được lập cho năm tài chính kết thúc ngày nào?",
+      "ground_truth": "Ngày 31 tháng 12 năm 2025.",
+      "expected_pages": [7, 10]
+    },
+    {
+      "id": 4,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tổng cộng tài sản của Dược Hậu Giang tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "5.173.881.628.997 VND (số đầu năm: 5.959.243.276.265 VND).",
+      "expected_pages": [8, 9]
+    },
+    {
+      "id": 5,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tài sản ngắn hạn cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "3.888.768.378.369 VND (số đầu năm: 4.604.003.766.930 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 6,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tài sản dài hạn cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "1.285.113.250.628 VND (số đầu năm: 1.355.239.509.335 VND).",
+      "expected_pages": [8]
+    },
+    {
+      "id": 7,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Số dư tiền và các khoản tương đương tiền cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "129.895.664.996 VND (đầu năm: 62.857.547.612 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 8,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Giá trị hàng tồn kho (mã số 140) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "1.024.618.562.192 VND (đầu năm: 1.115.429.265.990 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 9,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Đầu tư tài chính ngắn hạn (nắm giữ đến ngày đáo hạn) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "2.024.000.000.000 VND (đầu năm: 2.745.000.000.000 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 10,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tổng nợ phải trả cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "1.036.616.453.045 VND (đầu năm: 1.864.488.178.296 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 11,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Nợ ngắn hạn cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "965.949.656.404 VND (đầu năm: 1.790.292.694.239 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 12,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Vốn chủ sở hữu cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "4.137.265.175.952 VND (đầu năm: 4.094.755.097.969 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 13,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Vốn góp của chủ sở hữu tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "1.307.460.710.000 VND (không đổi so với đầu năm).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 14,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu bán hàng và cung cấp dịch vụ năm 2025 là bao nhiêu?",
+      "ground_truth": "6.136.905.368.338 VND (năm trước: 5.714.422.855.630 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 15,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu thuần về bán hàng và cung cấp dịch vụ năm 2025 là bao nhiêu?",
+      "ground_truth": "5.266.962.684.050 VND (năm trước: 4.884.867.655.092 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 16,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Giá vốn hàng bán năm 2025 là bao nhiêu?",
+      "ground_truth": "2.760.593.928.931 VND (năm trước: 2.747.101.521.942 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 17,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ năm 2025 là bao nhiêu?",
+      "ground_truth": "2.506.368.755.119 VND (năm trước: 2.137.766.133.150 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 18,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Tổng lợi nhuận kế toán trước thuế năm 2025 là bao nhiêu?",
+      "ground_truth": "986.599.267.177 VND (năm trước: 904.484.566.816 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 19,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lợi nhuận sau thuế thu nhập doanh nghiệp năm 2025 là bao nhiêu?",
+      "ground_truth": "852.354.107.582 VND (năm trước: 778.920.119.960 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 20,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lãi cơ bản trên cổ phiếu năm 2025 là bao nhiêu?",
+      "ground_truth": "6.308 VND/cổ phiếu (năm trước: 5.763 VND/cổ phiếu).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 21,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Chi phí bán hàng năm 2025 là bao nhiêu?",
+      "ground_truth": "1.157.316.021.444 VND (năm trước: 904.667.099.165 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 22,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần từ hoạt động kinh doanh năm 2025 là bao nhiêu?",
+      "ground_truth": "1.212.967.705.385 VND (năm trước: 1.317.583.405.328 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 23,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần từ hoạt động tài chính năm 2025 là bao nhiêu?",
+      "ground_truth": "Âm 1.957.374.626.414 VND, tức (1.957.374.626.414) VND (năm trước: (902.846.163.646) VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 24,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Trong năm 2025, công ty đã chi trả cổ tức/lợi nhuận cho chủ sở hữu bao nhiêu tiền?",
+      "ground_truth": "1.307.460.710.000 VND (dòng tiền chi, năm trước: 980.595.532.500 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 25,
+      "category": "suy_luan_tinh_toan",
+      "content_type": "table",
+      "question": "Biên lợi nhuận gộp năm 2025 của Dược Hậu Giang là bao nhiêu phần trăm?",
+      "ground_truth": "Khoảng 47,6% (= lợi nhuận gộp 2.506.368.755.119 / doanh thu thuần 5.266.962.684.050).",
+      "expected_pages": [10],
+      "notes": "Câu suy luận: cần lấy 2 chỉ tiêu từ báo cáo KQKD rồi tính tỷ lệ. Chấp nhận ~47-48%."
+    },
+    {
+      "id": 26,
+      "category": "suy_luan_tinh_toan",
+      "content_type": "table",
+      "question": "Lợi nhuận sau thuế năm 2025 tăng bao nhiêu phần trăm so với năm 2024?",
+      "ground_truth": "Khoảng 9,4% (từ 778.920.119.960 lên 852.354.107.582 VND).",
+      "expected_pages": [10],
+      "notes": "Câu suy luận: (852.354.107.582 - 778.920.119.960) / 778.920.119.960 ≈ 9,4%."
+    },
+    {
+      "id": 27,
+      "category": "am_tinh_khong_co",
+      "content_type": "n/a",
+      "question": "Giá cổ phiếu DHG trên sàn chứng khoán tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "Không tìm thấy. Báo cáo tài chính không công bố giá thị trường cổ phiếu.",
+      "expected_pages": [],
+      "notes": "Test âm tính: hệ thống phải nói không có thông tin, không được bịa."
+    },
+    {
+      "id": 28,
+      "category": "am_tinh_khong_co",
+      "content_type": "n/a",
+      "question": "Kế hoạch doanh thu năm 2026 của Dược Hậu Giang là bao nhiêu?",
+      "ground_truth": "Không tìm thấy. Báo cáo tài chính đã kiểm toán không đưa ra kế hoạch/dự báo doanh thu năm 2026.",
+      "expected_pages": [],
+      "notes": "Test âm tính/bẫy: không có số liệu dự báo trong BCTC."
+    }
+  ]
+}

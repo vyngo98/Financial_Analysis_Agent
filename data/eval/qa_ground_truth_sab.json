@@ -1,0 +1,243 @@
+{
+  "source_document": "SAB 2025.pdf",
+  "company": "Tổng Công ty Cổ phần Bia - Rượu - Nước Giải Khát Sài Gòn (Sabeco, SAB)",
+  "description": "Bộ QA ground-truth để đánh giá hệ thống RAG trên báo cáo tài chính HỢP NHẤT tiếng Việt DẠNG SCAN (đã kiểm toán, KPMG) của Sabeco năm 2025. Mọi con số được ĐỐI CHIẾU TRỰC TIẾP với ảnh PDF gốc (không lấy từ OCR) để tránh sai số. Đơn vị tiền: VND. 'expected_pages' là số trang PDF (1-indexed, khớp metadata 'page' do ingest_pdf sinh: trang bìa = 1, nên số trang PDF = số trang in + 1). 'content_type' cho biết đáp án nằm ở bảng hay văn bản. Chủ yếu kiểm khả năng OCR + truy hồi số liệu tài chính tiếng Việt trên báo cáo lớn (74 trang).",
+  "questions": [
+    {
+      "id": 1,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Báo cáo tài chính này là của công ty nào và trụ sở đăng ký ở đâu?",
+      "ground_truth": "Tổng Công ty Cổ phần Bia - Rượu - Nước Giải Khát Sài Gòn (Sabeco), trụ sở đăng ký tại Số 187, Đường Nguyễn Chí Thanh, Phường Chợ Lớn, Thành phố Hồ Chí Minh, Việt Nam.",
+      "expected_pages": [2]
+    },
+    {
+      "id": 2,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Đơn vị kiểm toán báo cáo tài chính hợp nhất năm 2025 của Sabeco là ai?",
+      "ground_truth": "Công ty TNHH KPMG (Việt Nam) — báo cáo kiểm toán do Chi nhánh Công ty TNHH KPMG tại TP. Hồ Chí Minh phát hành.",
+      "expected_pages": [2, 4]
+    },
+    {
+      "id": 3,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Cổ phiếu của Sabeco được niêm yết với mã chứng khoán nào và ở đâu?",
+      "ground_truth": "Mã chứng khoán SAB, niêm yết tại Sở Giao dịch Chứng khoán Thành phố Hồ Chí Minh (HOSE).",
+      "expected_pages": [14]
+    },
+    {
+      "id": 4,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Báo cáo tài chính hợp nhất được lập cho năm tài chính kết thúc ngày nào?",
+      "ground_truth": "Ngày 31 tháng 12 năm 2025.",
+      "expected_pages": [2, 10]
+    },
+    {
+      "id": 5,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tổng cộng tài sản hợp nhất của Sabeco tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "32.597.353.623.714 VND (số đầu năm 1/1/2025: 33.439.406.364.651 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 6,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tài sản ngắn hạn cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "22.140.977.869.887 VND (số đầu năm: 25.066.732.804.106 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 7,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tài sản dài hạn cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "10.456.375.753.827 VND (số đầu năm: 8.372.673.560.545 VND).",
+      "expected_pages": [7]
+    },
+    {
+      "id": 8,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Số dư tiền và các khoản tương đương tiền cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "4.016.881.626.734 VND (đầu năm: 4.477.501.667.326 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 9,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Giá trị hàng tồn kho (mã số 140) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "2.027.351.808.101 VND (đầu năm: 1.978.543.927.286 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 10,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Đầu tư tài chính ngắn hạn (nắm giữ đến ngày đáo hạn) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "14.985.488.933.982 VND (đầu năm: 16.566.239.177.101 VND).",
+      "expected_pages": [6]
+    },
+    {
+      "id": 11,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tổng nợ phải trả cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "9.597.538.547.160 VND (đầu năm: 9.002.313.181.979 VND).",
+      "expected_pages": [8]
+    },
+    {
+      "id": 12,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Nợ ngắn hạn cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "8.880.281.129.189 VND (đầu năm: 8.657.140.531.800 VND).",
+      "expected_pages": [8]
+    },
+    {
+      "id": 13,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Vốn chủ sở hữu cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "22.999.815.076.554 VND (đầu năm: 24.437.093.182.672 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 14,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Vốn cổ phần (vốn góp của chủ sở hữu) tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "12.825.623.720.000 VND (không đổi so với đầu năm).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 15,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu (mã số 01) năm 2025 là bao nhiêu?",
+      "ground_truth": "26.249.006.889.260 VND (năm trước: 32.164.260.254.074 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 16,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu thuần về bán hàng và cung cấp dịch vụ năm 2025 là bao nhiêu?",
+      "ground_truth": "25.888.192.228.121 VND (năm trước: 31.872.417.486.656 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 17,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Giá vốn hàng bán năm 2025 là bao nhiêu?",
+      "ground_truth": "16.587.631.403.329 VND (năm trước: 22.554.220.918.390 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 18,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ năm 2025 là bao nhiêu?",
+      "ground_truth": "9.300.560.824.792 VND (năm trước: 9.318.196.568.266 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 19,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Tổng lợi nhuận kế toán trước thuế năm 2025 là bao nhiêu?",
+      "ground_truth": "5.651.965.788.427 VND (năm trước: 5.647.358.628.166 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 20,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lợi nhuận thuần sau thuế thu nhập doanh nghiệp năm 2025 là bao nhiêu?",
+      "ground_truth": "4.573.125.077.058 VND (năm trước: 4.494.773.426.912 VND).",
+      "expected_pages": [10, 11]
+    },
+    {
+      "id": 21,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lãi cơ bản trên cổ phiếu năm 2025 là bao nhiêu?",
+      "ground_truth": "3.347 VND/cổ phiếu (năm trước điều chỉnh lại: 3.281 VND/cổ phiếu).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 22,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Chi phí bán hàng năm 2025 là bao nhiêu?",
+      "ground_truth": "4.022.369.468.136 VND (năm trước: 4.041.556.507.837 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 23,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần từ hoạt động kinh doanh năm 2025 là bao nhiêu?",
+      "ground_truth": "3.898.884.563.124 VND (năm trước: 4.362.509.568.540 VND).",
+      "expected_pages": [12]
+    },
+    {
+      "id": 24,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần từ hoạt động tài chính năm 2025 là bao nhiêu?",
+      "ground_truth": "Âm 6.787.749.735.923 VND, tức (6.787.749.735.923) VND (năm trước: (4.943.450.227.964) VND).",
+      "expected_pages": [13]
+    },
+    {
+      "id": 25,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Trong năm 2025, Sabeco đã chi trả cổ tức bao nhiêu tiền?",
+      "ground_truth": "6.512.668.096.116 VND (dòng tiền chi trả cổ tức, năm trước: 4.658.550.227.964 VND).",
+      "expected_pages": [13]
+    },
+    {
+      "id": 26,
+      "category": "suy_luan_tinh_toan",
+      "content_type": "table",
+      "question": "Biên lợi nhuận gộp năm 2025 của Sabeco là bao nhiêu phần trăm?",
+      "ground_truth": "Khoảng 35,9% (= lợi nhuận gộp 9.300.560.824.792 / doanh thu thuần 25.888.192.228.121).",
+      "expected_pages": [10],
+      "notes": "Câu suy luận: lấy 2 chỉ tiêu từ KQKD rồi tính tỷ lệ. Chấp nhận ~35-36%."
+    },
+    {
+      "id": 27,
+      "category": "suy_luan_tinh_toan",
+      "content_type": "table",
+      "question": "Doanh thu thuần năm 2025 tăng hay giảm bao nhiêu phần trăm so với năm 2024?",
+      "ground_truth": "Giảm khoảng 18,8% (từ 31.872.417.486.656 xuống 25.888.192.228.121 VND).",
+      "expected_pages": [10],
+      "notes": "Câu suy luận: (25.888.192.228.121 - 31.872.417.486.656)/31.872.417.486.656 ≈ -18,8%. Chấp nhận ~-18 đến -19%."
+    },
+    {
+      "id": 28,
+      "category": "am_tinh_khong_co",
+      "content_type": "n/a",
+      "question": "Giá cổ phiếu SAB trên sàn chứng khoán tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "Không tìm thấy. Báo cáo tài chính không công bố giá thị trường của cổ phiếu.",
+      "expected_pages": [],
+      "notes": "Test âm tính: hệ thống phải nói không có thông tin, không được bịa."
+    },
+    {
+      "id": 29,
+      "category": "am_tinh_khong_co",
+      "content_type": "n/a",
+      "question": "Kế hoạch doanh thu năm 2026 của Sabeco là bao nhiêu?",
+      "ground_truth": "Không tìm thấy. Báo cáo tài chính đã kiểm toán không đưa ra kế hoạch/dự báo doanh thu năm 2026.",
+      "expected_pages": [],
+      "notes": "Test âm tính/bẫy: không có số liệu dự báo trong BCTC."
+    }
+  ]
+}

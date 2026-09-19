@@ -1,0 +1,26 @@
+[
+  {
+    "document_id": "df5aeafa-2829-4fd7-b269-0c35a0d5dac3",
+    "filename": "vinamilk_2023_consolidated_financial_statements.pdf",
+    "status": "ready",
+    "uploaded_at": "2026-09-12T15:26:02.835942+00:00",
+    "num_pages": 66,
+    "num_text_pages": 65,
+    "num_ocr_pages": 1,
+    "num_tables": 47,
+    "num_chunks": 200
+  },
+  {
+    "document_id": "abc78d84-2d07-41be-9b97-01ff145941ea",
+    "filename": "DHG-Audited-FS-2025-VN.pdf",
+    "status": "ready",
+    "uploaded_at": "2026-09-19T10:41:57.158210+00:00",
+    "num_pages": 40,
+    "num_text_pages": 0,
+    "num_ocr_pages": 40,
+    "num_tables": 433,
+    "num_chunks": 565,
+    "currency": "VND",
+    "unit_scale": ""
+  }
+]

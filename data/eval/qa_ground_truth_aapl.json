@@ -1,0 +1,276 @@
+{
+  "source_document": "apple_fy2023_q4_consolidated_financial_statements.pdf",
+  "company": "Apple Inc.",
+  "description": "Ground-truth QA set for a REAL, digital-native (text-layer) financial report — Apple Inc. condensed consolidated financial statements (unaudited) for the fiscal year (twelve months) ended September 30, 2023, released with the Q4 FY2023 results. Exercises the NATIVE (pdfplumber, non-OCR) ingestion path on an English filing. Only 3 pages: p1 Statements of Operations (income statement), p2 Balance Sheets, p3 Statements of Cash Flows. All figures verified directly against the source PDF. Currency: USD; all figures 'in millions, except per-share amounts and shares (in thousands)' unless noted. 'expected_pages' are 1-indexed PDF page numbers of THIS file (matching ingest_pdf 'page' metadata). Unless a question says 'three months', all income-statement / cash-flow figures are the TWELVE-MONTH (full-year) FY2023 column, compared with FY2022 (ended September 24, 2022). 'content_type' marks whether the answer lives in a table or narrative text.",
+  "questions": [
+    {
+      "id": 1,
+      "category": "company_profile",
+      "content_type": "text",
+      "question": "Which company do these financial statements belong to, and for which fiscal period are the full-year figures reported?",
+      "ground_truth": "Apple Inc. The full-year figures are for the twelve months ended September 30, 2023 (compared with the twelve months ended September 24, 2022).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 2,
+      "category": "company_profile",
+      "content_type": "text",
+      "question": "Are Apple's financial statements in this document audited or unaudited, and in what units are the figures presented?",
+      "ground_truth": "They are unaudited condensed consolidated financial statements. Figures are in millions of U.S. dollars, except per-share amounts and share counts (which are in thousands).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 3,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were Apple's total net sales for the twelve months ended September 30, 2023?",
+      "ground_truth": "$383,285 million (FY2022: $394,328 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 4,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were Products net sales for the full year fiscal 2023?",
+      "ground_truth": "$298,085 million (FY2022: $316,199 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 5,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were Services net sales for the full year fiscal 2023?",
+      "ground_truth": "$85,200 million (FY2022: $78,129 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 6,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was total cost of sales for the twelve months ended September 30, 2023?",
+      "ground_truth": "$214,137 million (FY2022: $223,546 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 7,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was Apple's gross margin for full-year fiscal 2023?",
+      "ground_truth": "$169,148 million (FY2022: $170,782 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 8,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was research and development expense for the twelve months ended September 30, 2023?",
+      "ground_truth": "$29,915 million (FY2022: $26,251 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 9,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were total operating expenses for full-year fiscal 2023?",
+      "ground_truth": "$54,847 million (FY2022: $51,345 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 10,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was operating income for the twelve months ended September 30, 2023?",
+      "ground_truth": "$114,301 million (FY2022: $119,437 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 11,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was Apple's net income for full-year fiscal 2023?",
+      "ground_truth": "$96,995 million (FY2022: $99,803 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 12,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were basic and diluted earnings per share for full-year fiscal 2023?",
+      "ground_truth": "Basic EPS $6.16 and diluted EPS $6.13 (FY2022: $6.15 basic, $6.11 diluted).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 13,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What was iPhone net sales for the full year fiscal 2023?",
+      "ground_truth": "$200,583 million (FY2022: $205,489 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 14,
+      "category": "income_statement",
+      "content_type": "table",
+      "question": "What were net sales in Greater China for the twelve months ended September 30, 2023?",
+      "ground_truth": "$72,559 million (FY2022: $74,200 million).",
+      "expected_pages": [1]
+    },
+    {
+      "id": 15,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were Apple's total assets as of September 30, 2023?",
+      "ground_truth": "$352,583 million (September 24, 2022: $352,755 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 16,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were total current assets as of September 30, 2023?",
+      "ground_truth": "$143,566 million (September 24, 2022: $135,405 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 17,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was cash and cash equivalents as of September 30, 2023?",
+      "ground_truth": "$29,965 million (September 24, 2022: $23,646 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 18,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were inventories as of September 30, 2023?",
+      "ground_truth": "$6,331 million (September 24, 2022: $4,946 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 19,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was net property, plant and equipment as of September 30, 2023?",
+      "ground_truth": "$43,715 million (September 24, 2022: $42,117 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 20,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was accounts payable as of September 30, 2023?",
+      "ground_truth": "$62,611 million (September 24, 2022: $64,115 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 21,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What were total liabilities as of September 30, 2023?",
+      "ground_truth": "$290,437 million (September 24, 2022: $302,083 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 22,
+      "category": "balance_sheet",
+      "content_type": "table",
+      "question": "What was total shareholders' equity as of September 30, 2023?",
+      "ground_truth": "$62,146 million (September 24, 2022: $50,672 million).",
+      "expected_pages": [2]
+    },
+    {
+      "id": 23,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "What was cash generated by operating activities for full-year fiscal 2023?",
+      "ground_truth": "$110,543 million (FY2022: $122,151 million).",
+      "expected_pages": [3]
+    },
+    {
+      "id": 24,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "What was cash generated by (or used in) investing activities for full-year fiscal 2023?",
+      "ground_truth": "$3,705 million generated (FY2022: $(22,354) million used).",
+      "expected_pages": [3]
+    },
+    {
+      "id": 25,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "What was cash used in financing activities for full-year fiscal 2023?",
+      "ground_truth": "$(108,488) million, i.e. $108,488 million of cash used (FY2022: $(110,749) million).",
+      "expected_pages": [3]
+    },
+    {
+      "id": 26,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "How much did Apple pay for dividends and dividend equivalents in fiscal 2023?",
+      "ground_truth": "$15,025 million (FY2022: $14,841 million).",
+      "expected_pages": [3]
+    },
+    {
+      "id": 27,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "How much did Apple spend on repurchases of common stock in fiscal 2023?",
+      "ground_truth": "$77,550 million (FY2022: $89,402 million).",
+      "expected_pages": [3]
+    },
+    {
+      "id": 28,
+      "category": "cash_flow",
+      "content_type": "table",
+      "question": "How much did Apple pay for acquisition of property, plant and equipment in fiscal 2023?",
+      "ground_truth": "$10,959 million (FY2022: $10,708 million).",
+      "expected_pages": [3]
+    },
+    {
+      "id": 29,
+      "category": "reasoning",
+      "content_type": "table",
+      "question": "What was Apple's gross margin percentage (gross margin as a percentage of total net sales) for full-year fiscal 2023?",
+      "ground_truth": "Approximately 44.1% (gross margin $169,148 million / total net sales $383,285 million).",
+      "expected_pages": [1],
+      "notes": "Reasoning: two income-statement lines then a ratio. Accept ~44%."
+    },
+    {
+      "id": 30,
+      "category": "reasoning",
+      "content_type": "table",
+      "question": "Did Apple's total net sales grow or decline in fiscal 2023 versus fiscal 2022, and by roughly how much in percentage terms?",
+      "ground_truth": "They declined, from $394,328 million in FY2022 to $383,285 million in FY2023 — a decrease of about $11,043 million, roughly 2.8% lower.",
+      "expected_pages": [1],
+      "notes": "Reasoning: (383,285 - 394,328) / 394,328 ≈ -2.8%. Direction (decline) must be correct."
+    },
+    {
+      "id": 31,
+      "category": "reasoning",
+      "content_type": "table",
+      "question": "What was the share of Services in Apple's total net sales for full-year fiscal 2023?",
+      "ground_truth": "About 22.2% (Services $85,200 million / total net sales $383,285 million). Accept ~22%.",
+      "expected_pages": [1],
+      "notes": "Reasoning: Services net sales divided by total net sales."
+    },
+    {
+      "id": 32,
+      "category": "negative_not_found",
+      "content_type": "n/a",
+      "question": "What was Apple's total headcount (number of full-time employees) as of September 30, 2023?",
+      "ground_truth": "Not found. These condensed financial statements do not disclose employee headcount.",
+      "expected_pages": [],
+      "notes": "Negative test: employee count is not in these 3 statement pages; the system must abstain, not invent a figure."
+    },
+    {
+      "id": 33,
+      "category": "negative_not_found",
+      "content_type": "n/a",
+      "question": "What is Apple's official total net sales guidance (target figure) for fiscal year 2024?",
+      "ground_truth": "Not found. This document reports fiscal 2023 results and does not provide a numerical revenue target/guidance for fiscal 2024.",
+      "expected_pages": [],
+      "notes": "Negative/trap test: no forward guidance number in the filing."
+    }
+  ]
+}

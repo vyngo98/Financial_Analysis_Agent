@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial RAG Agent</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">📊</span>
+        <div>
+          <div class="brand-title">Financial RAG</div>
+          <div class="brand-sub">Local Ollama agent</div>
+        </div>
+      </div>
+
+      <!-- Documents -->
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Documents</h2>
+          <label class="upload-btn" title="Upload PDF">
+            <input type="file" id="file-input" accept="application/pdf" hidden />
+            + Upload
+          </label>
+        </div>
+        <div id="upload-status" class="upload-status hidden"></div>
+        <ul id="documents" class="list"></ul>
+      </section>
+
+      <!-- Sessions -->
+      <section class="panel sessions-panel">
+        <div class="panel-head">
+          <h2>Sessions</h2>
+        </div>
+        <ul id="sessions" class="list"></ul>
+      </section>
+    </aside>
+
+    <!-- Main chat -->
+    <main class="chat">
+      <header class="chat-head">
+        <div>
+          <div id="chat-title" class="chat-title">Chưa chọn phiên</div>
+          <div id="chat-doc" class="chat-doc">Chọn một document ở bên trái để bắt đầu hỏi</div>
+        </div>
+      </header>
+
+      <div id="messages" class="messages">
+        <div class="empty-state">
+          <div class="empty-icon">💬</div>
+          <p>Upload một PDF rồi chọn nó để tạo phiên hỏi–đáp.</p>
+        </div>
+      </div>
+
+      <form id="composer" class="composer">
+        <textarea
+          id="composer-input"
+          placeholder="Hỏi về báo cáo tài chính đã chọn…"
+          rows="1"
+          disabled
+        ></textarea>
+        <button id="send-btn" type="submit" disabled>Gửi</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

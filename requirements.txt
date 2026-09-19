@@ -1,0 +1,27 @@
+langchain
+langchain-community
+langchain-qdrant
+qdrant-client
+langchain-ollama
+langchain-text-splitters
+
+pypdf
+pdfplumber
+python-dotenv
+
+# Trình trích bảng native MẶC ĐỊNH (TABLE_EXTRACTOR=camelot_rows): Camelot stream sinh chunk
+# 1-dòng-1-chunk (nhãn = giá_trị) cho đường compute %. Kéo theo opencv-python-headless/pandas.
+# System dep: ghostscript (apt-get install ghostscript) — cần cho một số PDF/flavor.
+camelot-py==2.0.0
+
+docling
+easyocr
+
+# Hybrid retrieval (v4): BM25 keyword recall + cross-encoder rerank.
+# torch đã có sẵn qua easyocr/docling; sentence-transformers dùng cho CrossEncoder.
+sentence-transformers
+rank-bm25
+
+fastapi
+uvicorn
+python-multipart

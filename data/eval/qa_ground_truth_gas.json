@@ -1,0 +1,231 @@
+{
+  "source_document": "20260304 - GAS - CBTT Bao cao tai chinh kiem toan hop nhat 2025.pdf",
+  "company": "Tổng Công ty Khí Việt Nam - CTCP (PV GAS)",
+  "description": "Bộ QA ground-truth để đánh giá hệ thống RAG trên báo cáo tài chính HỢP NHẤT tiếng Việt DẠNG SCAN (đã kiểm toán, Deloitte) của PV GAS năm 2025. Mọi con số được ĐỐI CHIẾU TRỰC TIẾP với ảnh PDF gốc (không lấy từ OCR) để tránh sai số. Đơn vị tiền: VND. 'expected_pages' là số trang PDF (1-indexed, khớp metadata 'page' do ingest_pdf sinh: bảng cân đối p9-10, KQKD p11, lưu chuyển tiền tệ p12-13). 'content_type' cho biết đáp án nằm ở bảng hay văn bản. Chủ yếu kiểm khả năng OCR + truy hồi số liệu tài chính tiếng Việt quy mô nghìn tỷ.",
+  "questions": [
+    {
+      "id": 1,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Báo cáo tài chính này là của công ty nào và trụ sở chính ở đâu?",
+      "ground_truth": "Tổng Công ty Khí Việt Nam - CTCP (PV GAS), mã chứng khoán GAS, trụ sở tại PV GAS Tower, số 673 đường Nguyễn Hữu Thọ, xã Nhà Bè, Thành phố Hồ Chí Minh.",
+      "expected_pages": [1, 6]
+    },
+    {
+      "id": 2,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Đơn vị kiểm toán báo cáo tài chính hợp nhất năm 2025 của PV GAS là ai?",
+      "ground_truth": "Công ty TNHH Kiểm toán Deloitte Việt Nam.",
+      "expected_pages": [7, 8]
+    },
+    {
+      "id": 3,
+      "category": "thong_tin_cong_ty",
+      "content_type": "text",
+      "question": "Báo cáo tài chính được lập cho năm tài chính kết thúc ngày nào?",
+      "ground_truth": "Ngày 31 tháng 12 năm 2025.",
+      "expected_pages": [7, 9]
+    },
+    {
+      "id": 4,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tổng cộng tài sản (mã số 270) của PV GAS tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "93.568.198.109.790 VND (số đầu năm: 81.854.881.408.158 VND).",
+      "expected_pages": [9, 10]
+    },
+    {
+      "id": 5,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tài sản ngắn hạn (mã số 100) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "69.902.465.635.326 VND (số đầu năm: 57.290.495.430.038 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 6,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Số dư tiền và các khoản tương đương tiền (mã số 110) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "6.876.468.282.085 VND (số đầu năm: 5.567.983.431.468 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 7,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Giá trị hàng tồn kho thuần (mã số 140) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "4.398.771.281.185 VND (số đầu năm: 4.598.950.949.593 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 8,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Các khoản phải thu ngắn hạn (mã số 130) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "24.881.281.586.057 VND (số đầu năm: 19.098.417.078.475 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 9,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Giá trị tài sản cố định (mã số 220) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "15.950.791.009.155 VND (số đầu năm: 18.221.636.601.588 VND).",
+      "expected_pages": [9]
+    },
+    {
+      "id": 10,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Tổng nợ phải trả (mã số 300) của PV GAS cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "25.914.808.991.853 VND (số đầu năm: 20.283.886.142.528 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 11,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Vốn chủ sở hữu (mã số 400) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "67.653.389.117.937 VND (số đầu năm: 61.570.995.265.630 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 12,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Vốn góp của chủ sở hữu (mã số 411) tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "24.129.497.560.000 VND (số đầu năm: 23.426.729.190.000 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 13,
+      "category": "bang_can_doi_ke_toan",
+      "content_type": "table",
+      "question": "Lợi nhuận sau thuế chưa phân phối (mã số 421) cuối năm 2025 là bao nhiêu?",
+      "ground_truth": "12.484.110.062.726 VND (số đầu năm: 9.553.019.715.422 VND).",
+      "expected_pages": [10]
+    },
+    {
+      "id": 14,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu bán hàng và cung cấp dịch vụ (mã số 01) năm 2025 là bao nhiêu?",
+      "ground_truth": "135.196.548.909.363 VND (năm trước: 103.603.614.927.247 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 15,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã số 10) năm 2025 là bao nhiêu?",
+      "ground_truth": "135.129.055.328.395 VND (năm trước: 103.564.126.562.888 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 16,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Giá vốn hàng bán và dịch vụ cung cấp (mã số 11) năm 2025 là bao nhiêu?",
+      "ground_truth": "118.078.501.968.730 VND (năm trước: 85.909.769.124.140 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 17,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã số 20) năm 2025 là bao nhiêu?",
+      "ground_truth": "17.050.553.359.665 VND (năm trước: 17.654.357.438.748 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 18,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Tổng lợi nhuận kế toán trước thuế (mã số 50) năm 2025 là bao nhiêu?",
+      "ground_truth": "14.359.435.183.859 VND (năm trước: 13.172.107.496.375 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 19,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lợi nhuận sau thuế thu nhập doanh nghiệp (mã số 60) năm 2025 là bao nhiêu?",
+      "ground_truth": "11.571.631.226.008 VND (năm trước: 10.590.120.585.510 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 20,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Lãi cơ bản trên cổ phiếu (mã số 70) năm 2025 là bao nhiêu?",
+      "ground_truth": "4.647 VND (năm trước: 4.140 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 21,
+      "category": "ket_qua_kinh_doanh",
+      "content_type": "table",
+      "question": "Doanh thu hoạt động tài chính (mã số 21) năm 2025 là bao nhiêu?",
+      "ground_truth": "1.580.477.045.284 VND (năm trước: 1.736.612.351.244 VND).",
+      "expected_pages": [11]
+    },
+    {
+      "id": 22,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã số 20) năm 2025 là bao nhiêu?",
+      "ground_truth": "13.040.237.870.138 VND (năm trước: 9.035.210.701.364 VND).",
+      "expected_pages": [12]
+    },
+    {
+      "id": 23,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã số 30) năm 2025 là bao nhiêu?",
+      "ground_truth": "Âm 6.468.619.501.015 VND, tức (6.468.619.501.015) VND (năm trước: 7.468.309.783.967 VND).",
+      "expected_pages": [12]
+    },
+    {
+      "id": 24,
+      "category": "luu_chuyen_tien_te",
+      "content_type": "table",
+      "question": "Lưu chuyển tiền thuần trong năm (mã số 50) năm 2025 là bao nhiêu?",
+      "ground_truth": "1.307.076.603.899 VND (năm trước: âm 108.907.750.742 VND).",
+      "expected_pages": [13]
+    },
+    {
+      "id": 25,
+      "category": "suy_luan_tinh_toan",
+      "content_type": "table",
+      "question": "Biên lợi nhuận gộp năm 2025 của PV GAS là bao nhiêu phần trăm?",
+      "ground_truth": "Khoảng 12,6% (lợi nhuận gộp 17.050.553.359.665 / doanh thu thuần 135.129.055.328.395). Chấp nhận ~12-13%.",
+      "expected_pages": [11]
+    },
+    {
+      "id": 26,
+      "category": "suy_luan_tinh_toan",
+      "content_type": "table",
+      "question": "Lợi nhuận sau thuế năm 2025 tăng bao nhiêu phần trăm so với năm 2024?",
+      "ground_truth": "Khoảng 9,3% (từ 10.590.120.585.510 VND lên 11.571.631.226.008 VND). Suy luận: (11.571.631.226.008 - 10.590.120.585.510) / 10.590.120.585.510 ≈ 9,27%.",
+      "expected_pages": [11]
+    },
+    {
+      "id": 27,
+      "category": "am_tinh_khong_co",
+      "content_type": "text",
+      "question": "Tổng số lượng nhân viên của PV GAS tại ngày 31/12/2025 là bao nhiêu người?",
+      "ground_truth": "Báo cáo tài chính hợp nhất này không cung cấp thông tin về số lượng nhân viên.",
+      "expected_pages": []
+    },
+    {
+      "id": 28,
+      "category": "am_tinh_khong_co",
+      "content_type": "text",
+      "question": "Vốn hóa thị trường của cổ phiếu GAS tại ngày 31/12/2025 là bao nhiêu?",
+      "ground_truth": "Báo cáo tài chính không cung cấp thông tin về vốn hóa thị trường (giá cổ phiếu trên thị trường).",
+      "expected_pages": []
+    }
+  ]
+}
