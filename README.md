@@ -8,7 +8,7 @@ Ask *“What was the gross profit margin in 2025?”* or *“How much did net pr
 
 ---
 ## Demo
-![Demo](videos/demo-financial_analysis.mp4)
+![Demo](videos/demo-financial_analysis.gif)
 
 ## Highlights
 
