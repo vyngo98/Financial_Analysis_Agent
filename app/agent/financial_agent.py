@@ -2,7 +2,7 @@ from langchain.agents import create_agent
 from langchain_ollama import ChatOllama
 
 from app.agent.tool_call_repair import repair_leaked_tool_calls
-from app.config import AGENT_GRAPH, LLM_MODEL
+from app.config import AGENT_GRAPH, LLM_MODEL, OLLAMA_BASE_URL
 from app.tools.calc_tool import calculate_percentage
 from app.tools.rag_tool import search_pdf_knowledge_base
 
@@ -148,6 +148,7 @@ def create_financial_agent():
     model = ChatOllama(
         model=LLM_MODEL,
         temperature=0,
+        base_url=OLLAMA_BASE_URL,
     )
 
     agent = create_agent(

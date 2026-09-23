@@ -31,6 +31,7 @@ from app.config import (
     ADAPTIVE_GRADER,
     ADAPTIVE_LLM_MODEL,
     ADAPTIVE_MAX_RETRIES,
+    OLLAMA_BASE_URL,
 )
 from app.rag.retrieval import (
     _classify_query,
@@ -58,7 +59,7 @@ def _get_adaptive_llm():
     if _LLM is None:
         from langchain_ollama import ChatOllama
 
-        _LLM = ChatOllama(model=ADAPTIVE_LLM_MODEL, temperature=0)
+        _LLM = ChatOllama(model=ADAPTIVE_LLM_MODEL, temperature=0, base_url=OLLAMA_BASE_URL)
     return _LLM
 
 

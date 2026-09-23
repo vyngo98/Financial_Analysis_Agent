@@ -30,7 +30,7 @@ import time
 import traceback
 from datetime import datetime
 
-from app.config import JUDGE_LLM_MODEL, LLM_MODEL, UPLOAD_DIR
+from app.config import JUDGE_LLM_MODEL, LLM_MODEL, OLLAMA_BASE_URL, UPLOAD_DIR
 from app.ingestion.pdf_ingestion import ingest_pdf
 from app.rag.retrieval import retrieve
 from app.rag.vector_store import (
@@ -212,7 +212,7 @@ def build_judge():
 
     # JUDGE_LLM_MODEL (mặc định = LLM_MODEL) cho phép GHIM judge cố định khi so sánh
     # nhiều answer-model — xem app/config.py.
-    return ChatOllama(model=JUDGE_LLM_MODEL, temperature=0)
+    return ChatOllama(model=JUDGE_LLM_MODEL, temperature=0, base_url=OLLAMA_BASE_URL)
 
 
 def parse_judge_json(text: str) -> dict:

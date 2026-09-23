@@ -33,6 +33,7 @@ from app.config import (
     ADAPTIVE_GRADER,
     ADAPTIVE_MAX_RETRIES,
     LLM_MODEL,
+    OLLAMA_BASE_URL,
     OPERAND_CANDIDATES,
     RAG_TOP_K,
 )
@@ -85,7 +86,7 @@ def _get_answer_llm():
     if _ANSWER_LLM is None:
         from langchain_ollama import ChatOllama
 
-        _ANSWER_LLM = ChatOllama(model=LLM_MODEL, temperature=0)
+        _ANSWER_LLM = ChatOllama(model=LLM_MODEL, temperature=0, base_url=OLLAMA_BASE_URL)
     return _ANSWER_LLM
 
 

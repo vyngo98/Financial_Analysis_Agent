@@ -5,6 +5,7 @@ from qdrant_client.http import models
 
 from app.config import (
     EMBEDDING_MODEL,
+    OLLAMA_BASE_URL,
     QDRANT_API_KEY,
     QDRANT_COLLECTION,
     QDRANT_URL,
@@ -14,7 +15,8 @@ from app.config import (
 def get_embeddings():
 
     return OllamaEmbeddings(
-        model=EMBEDDING_MODEL
+        model=EMBEDDING_MODEL,
+        base_url=OLLAMA_BASE_URL,
     )
 
 
