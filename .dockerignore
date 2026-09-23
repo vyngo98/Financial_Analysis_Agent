@@ -1,0 +1,16 @@
+venv/
+.venv/
+.idea/
+.claude/
+.git/
+scripts/
+pdf_export/
+app/chroma_db/
+app/data/
+app/__pycache__/
+**/__pycache__/
+*.pyc
+data/
+.env
+.env.*
+!.env.example
